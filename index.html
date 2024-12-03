@@ -72,8 +72,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* Move buttons to the bottom */
+        .sidebar .bottom-links {
+            margin-top: auto;
+        }
+
         .background-selector {
-            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -81,12 +87,16 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h1>My Website</h1>
-        <a href="#home" onclick="showSection('home')">Home</a>
-        <a href="#portfolios" onclick="showSection('portfolios')">Portfolios</a>
-        <a href="#about" onclick="showSection('about')">About Me</a>
         <div class="background-selector">
-            <label for="bg-image">Change Background: </label>
-            <input type="file" id="bg-image" accept="image/*" onchange="changeBackground(event)">
+            <!-- Developer can change the background by editing this link -->
+            <p>Background Image: <strong>[Developer's Choice]</strong></p>
+        </div>
+
+        <!-- Bottom links -->
+        <div class="bottom-links">
+            <a href="#home" onclick="showSection('home')">Home</a>
+            <a href="#portfolios" onclick="showSection('portfolios')">Portfolios</a>
+            <a href="#about" onclick="showSection('about')">About Me</a>
         </div>
     </div>
 
@@ -116,6 +126,7 @@
     </div>
 
     <script>
+        // Function to show the active section
         function showSection(sectionId) {
             // Hide all sections
             document.querySelectorAll('section').forEach(section => {
@@ -126,18 +137,10 @@
             document.getElementById(sectionId).classList.add('active');
         }
 
-        function changeBackground(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.body.style.backgroundImage = `url(${e.target.result})`;
-                    document.body.style.backgroundSize = "cover";
-                    document.body.style.backgroundPosition = "center";
-                };
-                reader.readAsDataURL(file);
-            }
-        }
+        // Developer can set the background image here by editing this line:
+        document.body.style.backgroundImage = 'url("your-background-image-url.jpg")';
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
     </script>
 </body>
 </html>
