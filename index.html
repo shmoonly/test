@@ -94,7 +94,6 @@
         <!-- Background customization for the developer -->
         <div class="background-selector">
             <!-- Developer can change the background by editing this link -->
-            <!-- This input field allows the developer to choose an image from the local system -->
             <input type="file" id="bg-image" accept="image/*" onchange="changeBackground(event)">
         </div>
 
@@ -157,10 +156,13 @@
             }
         }
 
-        // Optional: You can also set a default background here
-        // document.body.style.backgroundImage = 'url("default-background.jpg")';
-        // document.body.style.backgroundSize = "cover";
-        // document.body.style.backgroundPosition = "center";
+        // Set a default background image when the page loads
+        window.onload = function() {
+            // Set your default background image here
+            document.body.style.backgroundImage = 'url("your-default-background.jpg")';  // Change this URL
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+        };
     </script>
 </body>
 </html>
