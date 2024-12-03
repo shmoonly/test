@@ -73,16 +73,26 @@
             margin: 0 auto; /* Center the section horizontally */
             box-sizing: border-box;
             position: relative;
-            top: 0%; /* Move the section down by 10% of the viewport height */
+            top: 10%; /* Move the section down by 10% of the viewport height */
+        }
+
+        /* Portfolio section styles */
+        #portfolios {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
 
         .portfolio-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
             gap: 20px;
             max-width: 1200px; /* Optional: limit the maximum width */
             width: 100%;
             justify-items: center; /* Centers each portfolio item in the grid */
+            margin: 0 auto;
         }
 
         .portfolio-item {
