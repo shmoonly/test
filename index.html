@@ -76,50 +76,17 @@
             top: 10%; /* Move the section down by 10% of the viewport height */
         }
 
-        /* Portfolio section styles */
-        #portfolios {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .portfolio-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-            gap: 20px;
-            max-width: 1200px; /* Optional: limit the maximum width */
-            width: 100%;
-            justify-items: center; /* Centers each portfolio item in the grid */
-            margin: 0 auto;
-        }
-
-        .portfolio-item {
-            background-color: #ecf0f1;
+        /* About Me section styles */
+        #about {
+            width: 60%; /* Smaller width */
             padding: 20px;
-            border-radius: 5px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .portfolio-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .portfolio-item p {
-            margin-top: 10px;
-            font-size: 16px;
-            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: Background to make text stand out */
+            border-radius: 10px; /* Optional: Rounded corners */
+            margin: 0 auto; /* Center the section horizontally */
+            box-sizing: border-box;
+            position: relative;
+            top: 10%; /* Move the section down by 10% of the viewport height */
         }
 
         /* Move buttons to the bottom and stack them */
@@ -137,7 +104,6 @@
         <!-- Bottom links stacked vertically -->
         <div class="bottom-links">
             <a href="#home" onclick="showSection('home')">Home</a>
-            <a href="#portfolios" onclick="showSection('portfolios')">Portfolios</a>
             <a href="#about" onclick="showSection('about')">About Me</a>
         </div>
     </div>
@@ -150,23 +116,10 @@
             <p>This is the homepage. Use the sidebar to navigate to other sections.</p>
         </section>
 
-        <!-- Portfolios section -->
-        <section id="portfolios">
-            <h2>My Portfolios</h2>
-            <div class="portfolio-container">
-                <div class="portfolio-item">Portfolio 1</div>
-                <div class="portfolio-item">Portfolio 2</div>
-                <div class="portfolio-item">Portfolio 3</div>
-                <div class="portfolio-item">Portfolio 4</div>
-                <div class="portfolio-item">Portfolio 5</div>
-                <div class="portfolio-item">Portfolio 6</div>
-            </div>
-        </section>
-
         <!-- About Me section -->
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm [Your Name], and this is a brief introduction about me. Feel free to explore my portfolios and learn more about my work.</p>
+            <p>Hello! I'm [Your Name], and this is a brief introduction about me. Feel free to learn more about my work.</p>
         </section>
     </div>
 
