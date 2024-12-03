@@ -4,7 +4,59 @@
 		<title>Shmooniverse</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f4f4f4;
+				margin: 0;
+				padding: 0;
+			}
+
+			#header {
+				background-color: #333;
+				color: white;
+				padding: 20px;
+				text-align: center;
+			}
+
+			#main {
+				padding: 20px;
+			}
+
+			.portfolio-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 20px;
+				margin-top: 20px;
+			}
+
+			.portfolio-item {
+				background-color: #fff;
+				padding: 15px;
+				border-radius: 5px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				text-align: center;
+			}
+
+			.portfolio-item img {
+				width: 100%;
+				height: auto;
+				border-radius: 5px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			.portfolio-item p {
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			footer {
+				text-align: center;
+				padding: 20px;
+				background-color: #333;
+				color: white;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -13,18 +65,15 @@
 
 			<!-- Header -->
 			<header id="header">
-				<div></div>
-				<div class="content">
-					<div class="inner">
-						<h1>Shmooniverse</h1>
-						<p>A website made by Shmoon.</p>
-					</div>
+				<div>
+					<h1>Shmooniverse</h1>
+					<p>A website made by Shmoon.</p>
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#home">Home</a></li>
-						<li><a href="#portfolios">Portfolios</a></li>
-						<li><a href="#aboutme">About Me</a></li>
+						<li><a href="#home" style="color: white;">Home</a></li>
+						<li><a href="#portfolios" style="color: white;">Portfolios</a></li>
+						<li><a href="#aboutme" style="color: white;">About Me</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -35,14 +84,13 @@
 				<!-- Home -->
 				<article id="home">
 					<h2 class="major">Home</h2>
-					<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+					<span class="image main"><img src="images/pic01.jpg" alt="Home Image" /></span>
 					<p>Home Contents...</p>
 				</article>
 
 				<!-- Portfolios -->
 				<article id="portfolios">
 					<h2 class="major">Portfolios</h2>
-					<span class="image main"><img src="images/pic02.png" alt="" /></span>
 					<div class="portfolio-grid">
 						<div class="portfolio-item">
 							<a href="portfolios/portfolio1.pdf" target="_blank">
@@ -80,14 +128,16 @@
 				<!-- About Me -->
 				<article id="aboutme">
 					<h2 class="major">About Me</h2>
-					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+					<span class="image main"><img src="images/pic03.jpg" alt="About Me Image" /></span>
 					<p>About Me Content...</p>
 				</article>
 
 			</div>
 
 			<!-- Footer -->
-			<footer id="footer"></footer>
+			<footer id="footer">
+				<p>&copy; 2024 Shmooniverse</p>
+			</footer>
 			
 		</div>
 
