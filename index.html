@@ -9,6 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
+            transition: background-image 0.5s ease-in-out;
         }
 
         /* Sidebar styles */
@@ -70,6 +71,10 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .background-selector {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -79,6 +84,10 @@
         <a href="#home" onclick="showSection('home')">Home</a>
         <a href="#portfolios" onclick="showSection('portfolios')">Portfolios</a>
         <a href="#about" onclick="showSection('about')">About Me</a>
+        <div class="background-selector">
+            <label for="bg-image">Change Background: </label>
+            <input type="file" id="bg-image" accept="image/*" onchange="changeBackground(event)">
+        </div>
     </div>
 
     <!-- Main content -->
@@ -115,6 +124,19 @@
 
             // Show the selected section
             document.getElementById(sectionId).classList.add('active');
+        }
+
+        function changeBackground(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.body.style.backgroundImage = `url(${e.target.result})`;
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.backgroundPosition = "center";
+                };
+                reader.readAsDataURL(file);
+            }
         }
     </script>
 </body>
