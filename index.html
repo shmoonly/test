@@ -2,83 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <style>
-        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            line-height: 1.6;
+            color: #333;
         }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
         }
-        
-        /* Container Styles */
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            margin-top: 1rem;
         }
-        
-        .sidebar {
-            background-color: #f0f0f0;
-            padding: 20px;
-            width: 200px;
-            border-right: 1px solid #ccc;
-            text-align: right;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
         }
-        
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        nav a:hover {
+            text-decoration: underline;
         }
-        
-        .sidebar li {
-            display: inline-block;
-            margin-right: 20px;
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
         }
-        
-        /* Button Styles */
-        .home-button, .portfolio-button, .about-me-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
+        section {
+            margin: 2rem 0;
+            padding: 1rem 0;
+        }
+        #about {
+            text-align: center;
+        }
+        #portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .project {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+        .project h3 {
+            margin: 0.5rem;
+        }
+        #contact form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: auto;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #contact button {
+            padding: 0.7rem;
+            background: #007bff;
+            color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
         }
-        
-        .home-button:hover, .portfolio-button:hover, .about-me-button:hover {
-            background-color: #3e8e41;
+        #contact button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>My Website</h1>
-        <button class="home-button" onclick="location.href='index.html'">Home</button>
-        <button class="portfolio-button" onclick="location.href='portfolios.html'">Portfolios</button>
-        <button class="about-me-button" onclick="location.href='aboutme.html'">About Me</button>
-    </div>
-    
-    <div class="sidebar">
-        <ul>
-            <li>Home</li>
-            <li>Portfolio</li>
-            <li>About Me</li>
-        </ul>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a [Your Profession], passionate about [Your Interests]. Welcome to my portfolio site!</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of project 3.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </div>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
