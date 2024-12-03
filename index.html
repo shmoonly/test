@@ -1,179 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Example CSS for animations */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-            z-index: 1000;
-            animation: slideDown 0.5s ease-in-out;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5em;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff6347;
-        }
-
-        section {
-            margin-top: 100px;
-            padding: 2em;
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        .portfolio-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5em;
-        }
-
-        .portfolio-item {
-            background: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 1em;
-            border-radius: 8px;
-            flex: 1 1 calc(33.333% - 2em);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .portfolio-item:hover {
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em;
-            background: #333;
-            color: white;
-        }
-
-        /* Keyframes for animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>Shmooniverse</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolios">Portfolios</a></li>
-                <li><a href="#about-me">About Me</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="is-preload">
 
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to my website! Explore my work, learn about my projects, and get to know me better.</p>
-    </section>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-    <!-- Portfolios Section -->
-    <section id="portfolios">
-        <h2>Portfolios</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <h3>Project 1</h3>
-                <p>A description of Project 1.</p>
+        <!-- Header -->
+        <header id="header">
+            <div>
             </div>
-            <div class="portfolio-item">
-                <h3>Project 2</h3>
-                <p>A description of Project 2.</p>
+            <div class="content">
+                <div class="inner">
+                    <h1>Shmooniverse</h1>
+                    <p>A website made by Shmoon.</p>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <h3>Project 3</h3>
-                <p>A description of Project 3.</p>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolios">Portfolios</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Home -->
+            <article id="home">
+                <h2 class="major">Home</h2>
+                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            </article>
+
+            <!-- Portfolios -->
+            <article id="portfolios">
+                <h2 class="major">Portfolios</h2>
+                <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+                <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+                <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.</p>
+            </article>
+
+            <!-- About Me -->
+            <article id="aboutme">
+                <h2 class="major">About Me</h2>
+                <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam.</p>
+            </article>
         </div>
-    </section>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer and designer. I enjoy creating innovative and engaging experiences.</p>
-    </section>
+        <!-- Footer -->
+        <footer id="footer"></footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-    </footer>
+    </div>
 
-    <!-- Scripts for Animations -->
-    <script>
-        // Optional: Smooth scrolling for navigation links
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-    </script>
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
