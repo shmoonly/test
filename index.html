@@ -15,6 +15,14 @@
             background-attachment: fixed;
             height: 100vh;
             justify-content: flex-start; /* Align the content to the left, so the sidebar is fixed */
+            opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+            animation: fadeIn 1s forwards; /* Fade-in effect */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         /* Sidebar styles */
@@ -28,6 +36,14 @@
             flex-direction: column;
             padding: 20px 10px;
             box-sizing: border-box;
+            left: -120px; /* Initially hide the sidebar */
+            animation: slideIn 0.5s forwards; /* Slide-in animation */
+        }
+
+        @keyframes slideIn {
+            to {
+                left: 0;
+            }
         }
 
         .sidebar a {
@@ -57,6 +73,14 @@
         section {
             display: none;
             text-align: center; /* Center the text horizontally */
+            opacity: 0; /* Initially set opacity to 0 */
+            animation: fadeInSection 1s forwards; /* Fade-in animation for sections */
+        }
+
+        @keyframes fadeInSection {
+            to {
+                opacity: 1;
+            }
         }
 
         section.active {
@@ -109,6 +133,14 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease-in-out;
+            opacity: 0;
+            animation: fadeInPortfolio 1s forwards;
+        }
+
+        @keyframes fadeInPortfolio {
+            to {
+                opacity: 1;
+            }
         }
 
         .portfolio-item img {
@@ -140,6 +172,14 @@
         /* Increase font size for headers */
         h2 {
             font-size: 6em; /* Increase the font size to 6em */
+            opacity: 0;
+            animation: fadeInHeading 1s forwards; /* Fade-in animation for heading */
+        }
+
+        @keyframes fadeInHeading {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
