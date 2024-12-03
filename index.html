@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <title>My Website</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Container Styles */
         .container {
             width: 80%;
             margin: 0 auto;
@@ -40,11 +48,7 @@
             margin-right: 20px;
         }
         
-        .container > * {
-            float: left;
-            width: 30%;
-        }
-        
+        /* Button Styles */
         .home-button, .portfolio-button, .about-me-button {
             background-color: #4CAF50;
             color: white;
