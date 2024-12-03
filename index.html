@@ -10,9 +10,9 @@
             font-family: Arial, sans-serif;
             display: flex;
             transition: background-image 0.5s ease-in-out;
-            background-size: cover; /* Ensures background image covers the full screen */
-            background-position: center center; /* Centers the background image */
-            background-attachment: fixed; /* Keeps the background fixed during scrolling */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
         }
 
         /* Sidebar styles */
@@ -43,9 +43,13 @@
 
         /* Main content styles */
         .content {
-            margin-left: 200px;
+            margin-left: 100px; /* Account for sidebar width */
             padding: 20px;
             flex: 1;
+            display: flex;
+            justify-content: center; /* Center the portfolio content */
+            align-items: center; /* Center the portfolio content vertically */
+            flex-direction: column;
         }
 
         section {
@@ -58,8 +62,11 @@
 
         .portfolio-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
             gap: 20px;
+            max-width: 1200px; /* Optional: limit the maximum width */
+            width: 100%;
+            justify-items: center; /* Centers each portfolio item in the grid */
         }
 
         .portfolio-item {
@@ -68,6 +75,25 @@
             border-radius: 5px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         /* Move buttons to the bottom and stack them */
