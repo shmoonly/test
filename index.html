@@ -25,12 +25,6 @@
             box-sizing: border-box;
         }
 
-        .sidebar h1 {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
         .sidebar a {
             color: white;
             text-decoration: none;
@@ -80,23 +74,13 @@
             flex-direction: column;
             align-items: center;
         }
-
-        .background-selector {
-            margin-bottom: 20px;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <h1>My Website</h1>
+        <!-- Background customization removed -->
         
-        <!-- Background customization for the developer -->
-        <div class="background-selector">
-            <input type="file" id="bg-image" accept="image/*" onchange="changeBackground(event)">
-        </div>
-
         <!-- Bottom links stacked vertically -->
         <div class="bottom-links">
             <a href="#home" onclick="showSection('home')">Home</a>
@@ -140,20 +124,6 @@
 
             // Show the selected section
             document.getElementById(sectionId).classList.add('active');
-        }
-
-        // Function to allow the developer to customize the background image
-        function changeBackground(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.body.style.backgroundImage = `url(${e.target.result})`;
-                    document.body.style.backgroundSize = "cover";
-                    document.body.style.backgroundPosition = "center";
-                };
-                reader.readAsDataURL(file);
-            }
         }
 
         // Set a default background image when the page loads
