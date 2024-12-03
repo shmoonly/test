@@ -63,16 +63,17 @@
 
         /* Centering the Home section content */
         #home {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* This centers the section */
+            position: relative;
+            width: calc(100% - 120px); /* Make sure the section doesn't overlap with the sidebar */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 20px;
-            max-width: 80%; /* Optional: Limit the width */
             background-color: rgba(255, 255, 255, 0.8); /* Optional: Background to make text stand out */
             border-radius: 10px; /* Optional: Rounded corners */
-            width: calc(100% - 120px); /* Account for updated sidebar width */
+            box-sizing: border-box;
         }
 
         .portfolio-container {
