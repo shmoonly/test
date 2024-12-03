@@ -73,7 +73,7 @@
             margin: 0 auto; /* Center the section horizontally */
             box-sizing: border-box;
             position: relative;
-            top: 10%; /* Move the section down by 10% of the viewport height */
+            top: 0%; /* Move the section to the top */
         }
 
         /* About Me section styles */
@@ -86,7 +86,55 @@
             margin: 0 auto; /* Center the section horizontally */
             box-sizing: border-box;
             position: relative;
-            top: 10%; /* Move the section down by 10% of the viewport height */
+            top: 0%; /* Move the section to the top */
+        }
+
+        /* Portfolio section styles */
+        #portfolios {
+            width: 80%; /* Adjust the width */
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            justify-items: center; /* Centers each portfolio item in the grid */
+        }
+
+        .portfolio-item {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         /* Move buttons to the bottom and stack them */
@@ -104,6 +152,7 @@
         <!-- Bottom links stacked vertically -->
         <div class="bottom-links">
             <a href="#home" onclick="showSection('home')">Home</a>
+            <a href="#portfolios" onclick="showSection('portfolios')">Portfolios</a>
             <a href="#about" onclick="showSection('about')">About Me</a>
         </div>
     </div>
@@ -114,6 +163,19 @@
         <section id="home" class="active">
             <h2>Welcome to My Website</h2>
             <p>This is the homepage. Use the sidebar to navigate to other sections.</p>
+        </section>
+
+        <!-- Portfolio section -->
+        <section id="portfolios">
+            <h2>My Portfolios</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">Portfolio 1</div>
+                <div class="portfolio-item">Portfolio 2</div>
+                <div class="portfolio-item">Portfolio 3</div>
+                <div class="portfolio-item">Portfolio 4</div>
+                <div class="portfolio-item">Portfolio 5</div>
+                <div class="portfolio-item">Portfolio 6</div>
+            </div>
         </section>
 
         <!-- About Me section -->
