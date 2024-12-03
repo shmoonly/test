@@ -13,18 +13,17 @@
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
-            height: 100vh; /* Ensure the body takes up full height */
-            justify-content: center; /* Center the content vertically */
-            align-items: center; /* Center the content horizontally */
+            height: 100vh;
+            justify-content: flex-start; /* Align the content to the left, so the sidebar is fixed */
         }
 
         /* Sidebar styles */
         .sidebar {
-            width: 120px; /* Updated sidebar width */
+            width: 120px; /* Sidebar width */
             background-color: #2c3e50;
             color: white;
             height: 100vh;
-            position: fixed;
+            position: fixed; /* Keep the sidebar fixed */
             display: flex;
             flex-direction: column;
             padding: 20px 10px;
@@ -46,7 +45,7 @@
 
         /* Main content styles */
         .content {
-            margin-left: 120px; /* Account for updated sidebar width */
+            margin-left: 120px; /* Account for the width of the sidebar */
             padding: 20px;
             flex: 1;
             display: flex;
