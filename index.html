@@ -13,6 +13,9 @@
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
+            height: 100vh; /* Ensure the body takes up full height */
+            justify-content: center; /* Center the content vertically */
+            align-items: center; /* Center the content horizontally */
         }
 
         /* Sidebar styles */
@@ -61,7 +64,7 @@
             display: block;
         }
 
-        /* Home section wrapper (smaller) */
+        /* Home section wrapper (smaller and vertically centered) */
         #home {
             width: 60%; /* Smaller width */
             padding: 20px;
@@ -70,6 +73,8 @@
             border-radius: 10px; /* Optional: Rounded corners */
             margin: 0 auto; /* Center the section horizontally */
             box-sizing: border-box;
+            position: relative;
+            top: 10%; /* Move the section down by 10% of the viewport height */
         }
 
         .portfolio-container {
