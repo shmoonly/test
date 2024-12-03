@@ -2,49 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            width: 200px;
+            border-right: 1px solid #ccc;
+            text-align: right;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .container > * {
+            float: left;
+            width: 30%;
+        }
+        
+        .home-button, .portfolio-button, .about-me-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .home-button:hover, .portfolio-button:hover, .about-me-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
-
-    <nav>
+    <div class="container">
+        <h1>My Website</h1>
+        <button class="home-button" onclick="location.href='index.html'">Home</button>
+        <button class="portfolio-button" onclick="location.href='portfolios.html'">Portfolios</button>
+        <button class="about-me-button" onclick="location.href='aboutme.html'">About Me</button>
+    </div>
+    
+    <div class="sidebar">
         <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#portfolios" class="nav-link">Portfolios</a></li>
-            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li>About Me</li>
         </ul>
-    </nav>
+    </div>
 
-    <section id="home">
-        <h2>Welcome to my Home Page!</h2>
-        <p>This is the introduction section where you can describe yourself or your work.</p>
-    </section>
-
-    <section id="portfolios">
-        <h2>My Portfolios</h2>
-        <p>Here are some of the projects I've worked on.</p>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This section is about your background, skills, and what you do.</p>
-    </section>
-
-    <footer>
-        <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#portfolios" class="nav-link">Portfolios</a></li>
-            <li><a href="#about" class="nav-link">About Me</a></li>
-        </ul>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
