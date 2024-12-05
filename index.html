@@ -14,14 +14,10 @@
             height: 100vh;
             background: center / cover no-repeat fixed;
             transition: background-image 0.5s ease-in-out;
-            animation: fadeIn 1s forwards, pulse 5s infinite alternate;
+            animation: fadeIn 1s forwards;
             opacity: 0;
         }
         @keyframes fadeIn { to { opacity: 1; } }
-        @keyframes pulse {
-            0% { filter: brightness(1); }
-            100% { filter: brightness(1.1); }
-        }
 
         .sidebar {
             width: 120px;
@@ -50,14 +46,6 @@
         .sidebar a:hover {
             background-color: #34495e;
             transform: scale(1.1);
-            animation: shake 0.5s;
-        }
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-3px); }
-            50% { transform: translateX(3px); }
-            75% { transform: translateX(-3px); }
-            100% { transform: translateX(0); }
         }
 
         .content {
@@ -87,14 +75,10 @@
         h2 {
             font-size: 4em;
             margin-bottom: 10px;
-            animation: bounce 1s forwards;
+            animation: fadeInHeading 1s forwards;
             opacity: 0;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
+        @keyframes fadeInHeading { to { opacity: 1; } }
 
         .portfolio-items {
             display: grid;
@@ -110,19 +94,10 @@
             text-align: center;
             box-shadow: none;
             transition: transform 0.2s ease-in-out;
-            animation: slideUpPortfolio 0.5s ease-in-out forwards;
+            animation: fadeInPortfolio 1s forwards;
             opacity: 0;
         }
-        .portfolio-item:nth-child(1) { animation-delay: 0.1s; }
-        .portfolio-item:nth-child(2) { animation-delay: 0.2s; }
-        .portfolio-item:nth-child(3) { animation-delay: 0.3s; }
-        .portfolio-item:nth-child(4) { animation-delay: 0.4s; }
-        .portfolio-item:nth-child(5) { animation-delay: 0.5s; }
-        .portfolio-item:nth-child(6) { animation-delay: 0.6s; }
-        @keyframes slideUpPortfolio {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeInPortfolio { to { opacity: 1; } }
 
         .portfolio-item:hover {
             transform: scale(1.05);
@@ -225,6 +200,7 @@
             document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
             document.getElementById(id).classList.add('active');
         };
+        window.onload = () => document.body.style.backgroundImage = 'url("images/bg.jpg")';
     </script>
 </body>
 </html>
