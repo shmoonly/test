@@ -56,6 +56,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-top: -40px; /* Move content higher */
         }
 
         section {
@@ -77,8 +78,13 @@
             margin-bottom: 10px;
             animation: fadeInHeading 1s forwards;
             opacity: 0;
+            margin-top: -20px; /* Move header higher */
         }
         @keyframes fadeInHeading { to { opacity: 1; } }
+
+        p {
+            margin-top: -10px; /* Move text higher */
+        }
 
         .portfolio-items {
             display: grid;
