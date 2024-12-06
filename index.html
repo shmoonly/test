@@ -21,7 +21,7 @@
 
         .sidebar {
             width: 120px;
-            background-color: #2c3e50;
+            background-color: rgba(44, 62, 80, 0.8); /* Semi-transparent background */
             color: white;
             height: 100vh;
             position: fixed;
@@ -31,6 +31,7 @@
             box-sizing: border-box;
             left: -120px;
             animation: slideIn 0.5s forwards;
+            backdrop-filter: blur(5px); /* Optional: blur effect for better visuals */
         }
         @keyframes slideIn { to { left: 0; } }
 
