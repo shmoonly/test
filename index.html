@@ -63,6 +63,9 @@
             text-align: center;
             opacity: 0;
             animation: fadeInSection 1s forwards, slideUp 1s forwards;
+            max-width: 800px; /* Limit the max width of sections */
+            width: 100%;
+            margin: 0 auto; /* Center align the text */
         }
         @keyframes fadeInSection { to { opacity: 1; } }
         @keyframes slideUp { to { transform: translateY(0); } }
