@@ -55,17 +55,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: -40px; /* Move content higher */
+            margin-top: -40px;
         }
 
         section {
             display: none;
-            text-align: justify; /* Justify text alignment */
+            text-align: justify;
             opacity: 0;
             animation: fadeInSection 1s forwards, slideUp 1s forwards;
-            max-width: 800px; /* Limit the max width of sections */
+            max-width: 800px;
             width: 100%;
-            margin: 0 auto; /* Center align the text */
+            margin: 0 auto;
         }
         @keyframes fadeInSection { to { opacity: 1; } }
         @keyframes slideUp { to { transform: translateY(0); } }
@@ -76,21 +76,25 @@
         }
 
         h1, h2 {
-            text-align: center; /* Center align h1 and h2 */
-            font-size: 4em;
-            margin-bottom: 10px;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
             animation: fadeInHeading 1s forwards;
             opacity: 0;
-            margin-top: -20px; /* Move header higher */
         }
         @keyframes fadeInHeading { to { opacity: 1; } }
 
         h3 {
-            text-align: left; /* Left align h3 headers */
+            text-align: left;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            margin-top: 30px;
         }
 
         p {
-            margin-top: -10px; /* Move text higher */
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 10px;
         }
 
         .portfolio-items {
@@ -114,7 +118,6 @@
 
         .portfolio-item:hover {
             transform: scale(1.05);
-            transition: transform 0.2s;
         }
 
         .portfolio-item img {
@@ -145,6 +148,7 @@
             flex-direction: column;
             align-items: center;
         }
+
     </style>
 </head>
 <body>
@@ -163,6 +167,7 @@
             <h3>Purpose</h3>
             <p>The purpose of this website is not only to share my work but also to inspire and connect with like-minded individuals who are passionate about technology and creativity. Whether you're a fellow IT enthusiast, a potential collaborator, or simply curious, there's something here for everyone.</p>
         </section>
+
         <section id="portfolios">
             <h2>My Portfolios</h2>
             <div class="portfolio-items">
@@ -192,16 +197,21 @@
                 </div>
             </div>
         </section>
+
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! My name is Wayne Czar A. Ricaplaza, and I'm currently pursuing a Bachelor of Science in Information Technology. I'm deeply passionate about the ever-expanding field of technology and how it shapes the world around us.</p>
-            <p>From an early age, I've been fascinated by the limitless possibilities of space and technology; this fascination inspired the creation of Shmooniverse. It reflects not just my interest in IT but also my love for the cosmos, creativity, and innovation.</p>
+            <p>Hi, I'm Wayne Czar A. Ricaplaza, a passionate student currently pursuing a Bachelor of Science in Information Technology. I'm deeply fascinated by the world of technology and how it is shaping the future of our world.</p>
+            <p>My journey into IT began with an interest in space and technology. I created Shmooniverse to reflect both my enthusiasm for IT and my love for the cosmos. It's a space where creativity meets innovation, and I aim to share that with the world.</p>
+
             <h3>Inspirations</h3>
-            <p>Space and the Universe: The boundless beauty and mystery of the cosmos inspire me to think beyond limits.</p>
-            <p>Technology: The constant evolution of IT motivates me to learn and grow.</p>
-            <p>Problem Solving: I enjoy tackling challenges and finding solutions that make a difference.</p>
+            <ul>
+                <li><strong>Space and the Universe:</strong> The boundless beauty and mystery of the cosmos inspire me to think beyond limits.</li>
+                <li><strong>Technology:</strong> The constant evolution of IT motivates me to learn and grow.</li>
+                <li><strong>Problem Solving:</strong> I enjoy tackling challenges and finding solutions that make a difference.</li>
+            </ul>
+
             <h3>A Little More About Me</h3>
-            <p>When I'm not working on IT projects, I enjoy exploring new tech trends, learning about different cultures, and experimenting with creative designs. My goal is to continuously improve my skills and contribute meaningfully to the IT field.</p>
+            <p>When I'm not working on IT projects, I explore new tech trends, learn about different cultures, and experiment with creative designs. My goal is to continuously improve my skills and contribute meaningfully to the IT field.</p>
         </section>
     </div>
 
