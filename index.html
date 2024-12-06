@@ -60,7 +60,7 @@
 
         section {
             display: none;
-            text-align: center;
+            text-align: justify; /* Justify text alignment */
             opacity: 0;
             animation: fadeInSection 1s forwards, slideUp 1s forwards;
             max-width: 800px; /* Limit the max width of sections */
@@ -84,9 +84,12 @@
         }
         @keyframes fadeInHeading { to { opacity: 1; } }
 
+        h3 {
+            text-align: left; /* Left align h3 headers */
+        }
+
         p {
             margin-top: -10px; /* Move text higher */
-            text-align: left;
         }
 
         .portfolio-items {
