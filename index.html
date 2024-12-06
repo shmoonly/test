@@ -149,6 +149,25 @@
             align-items: center;
         }
 
+        /* New styles for the image in the About Me section */
+        .about-me-image {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .about-me-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .about-me-text {
+            max-width: 600px;
+        }
     </style>
 </head>
 <body>
@@ -200,17 +219,22 @@
 
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello there! I'm Shmoon, my full name is Wayne Czar A. Ricaplaza, a passionate student currently pursuing a Bachelor of Science in Information Technology in University of San Carlos. I'm deeply fascinated by the world of technology and how it is shaping the future of our world.</p>
-            <p>My journey into IT began with an interest in space and technology. I created Shmooniverse to reflect both my enthusiasm for IT and my love for the cosmos.</p>
+            <div class="about-me-content">
+                <img src="images/about-me.jpg" alt="Wayne Czar A. Ricaplaza" class="about-me-image" />
+                <div class="about-me-text">
+                    <p>Hello there! I'm Shmoon, my full name is Wayne Czar A. Ricaplaza, a passionate student currently pursuing a Bachelor of Science in Information Technology in the University of San Carlos. I'm deeply fascinated by the world of technology and how it is shaping the future of our world.</p>
+                    <p>My journey into IT began with an interest in space and technology. I created Shmooniverse to reflect both my enthusiasm for IT and my love for the cosmos.</p>
 
-            <h3>Inspirations</h3>
-            <ul>
-                <li><strong>Space and the Universe:</strong> The boundless beauty and mystery of the cosmos inspire me.</li>
-                <li><strong>Technology:</strong> The constant evolution of IT motivates me to learn and grow.</li>
-            </ul>
+                    <h3>Inspirations</h3>
+                    <ul>
+                        <li><strong>Space and the Universe:</strong> The boundless beauty and mystery of the cosmos inspire me.</li>
+                        <li><strong>Technology:</strong> The constant evolution of IT motivates me to learn and grow.</li>
+                    </ul>
 
-            <h3>A Little More About Me</h3>
-            <p>When I'm not working on IT projects, I explore new tech trends, learn about different cultures, and experiment with creative designs. My goal is to continuously improve my skills and contribute meaningfully to the IT field.</p>
+                    <h3>A Little More About Me</h3>
+                    <p>When I'm not working on IT projects, I explore new tech trends, learn about different cultures, and experiment with creative designs. My goal is to continuously improve my skills and contribute meaningfully to the IT field.</p>
+                </div>
+            </div>
         </section>
     </div>
 
