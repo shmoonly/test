@@ -8,10 +8,10 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
             height: 100vh;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
             background: center / cover no-repeat fixed;
             transition: background-image 0.5s ease-in-out;
             animation: fadeIn 1s forwards;
@@ -21,7 +21,7 @@
 
         .sidebar {
             width: 120px;
-            background-color: rgba(44, 62, 80, 0); /* More transparent background */
+            background-color: rgba(44, 62, 80, 0);
             color: white;
             height: 100vh;
             position: fixed;
@@ -31,7 +31,7 @@
             box-sizing: border-box;
             left: -120px;
             animation: slideIn 0.5s forwards;
-            backdrop-filter: blur(0px); /* Optional: blur effect for better visuals */
+            backdrop-filter: blur(0px);
         }
         @keyframes slideIn { to { left: 0; } }
 
@@ -51,18 +51,15 @@
 
         .content {
             margin-left: 120px;
-            padding: 20px;
             flex: 1;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: -40px; /* Move content higher */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            text-align: center;
         }
 
         section {
             display: none;
-            text-align: center;
             opacity: 0;
             animation: fadeInSection 1s forwards, slideUp 1s forwards;
         }
@@ -76,68 +73,15 @@
 
         h2 {
             font-size: 4em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             animation: fadeInHeading 1s forwards;
             opacity: 0;
-            margin-top: -20px; /* Move header higher */
         }
         @keyframes fadeInHeading { to { opacity: 1; } }
 
         p {
-            margin-top: -10px; /* Move text higher */
-        }
-
-        .portfolio-items {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            width: 100%;
-            justify-items: center;
-        }
-
-        .portfolio-item {
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: none;
-            transition: transform 0.2s ease-in-out;
-            animation: fadeInPortfolio 1s forwards;
-            opacity: 0;
-        }
-        @keyframes fadeInPortfolio { to { opacity: 1; } }
-
-        .portfolio-item:hover {
-            transform: scale(1.05);
-            transition: transform 0.2s;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .portfolio-item p {
+            font-size: 1.2em;
             margin-top: 10px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .portfolio-item a {
-            text-decoration: none;
-            color: black;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .portfolio-item a:hover {
-            color: blue;
-        }
-
-        .bottom-links {
-            margin-top: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
     </style>
 </head>
@@ -157,44 +101,7 @@
         </section>
         <section id="portfolios">
             <h2>My Portfolios</h2>
-            <div class="portfolio-items">
-                <div class="portfolio-item">
-                    <a href="https://drive.google.com/file/d/1O-UvEFdP9skiX4qGg8UB81eR5P84i9vo/view?usp=drive_link" target="_blank">
-                        <img src="images/portfolio1.jpg" alt="Computer Science as a Discipline">
-                        <p><span>Portfolio #1</span></p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="https://drive.google.com/file/d/1UGwih0qpv3LxWFi9F8lVP2XUHNX88c8h/view?usp=drive_link" target="_blank">
-                        <img src="images/portfolio2.jpg" alt="Data and Information">
-                        <p><span>Portfolio #2</span></p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="https://drive.google.com/file/d/1IYX4sbyS0xqtIlIJOOf4IAfSl7rReJCI/view?usp=drive_link" target="_blank">
-                        <img src="images/portfolio3.jpg" alt="Number Systems">
-                        <p><span>Portfolio #3</span></p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="https://drive.google.com/file/d/1Bp91x2UxCBjKQ86kdEm5Rbn9YVoFIbH4/view?usp=drive_link" target="_blank">
-                        <img src="images/portfolio4.jpg" alt="Computer Hardware and Software">
-                        <p><span>Portfolio #4</span></p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="https://drive.google.com/file/d/1ttu4E-gEKbKFfBjx-gy1iVp1znYBp4if/view?usp=drive_link" target="_blank">
-                        <img src="images/portfolio5.jpg" alt="Comparative Study on Motherboards">
-                        <p><span>Portfolio #5</span></p>
-                    </a>
-                </div>
-                <div class="portfolio-item">
-                    <a href="https://drive.google.com/file/d/1soUtv1kz4_C7asYamX3RaRBY10xa6mZt/view?usp=drive_link" target="_blank">
-                        <img src="images/portfolio6.jpg" alt="Comparative Study on Computers">
-                        <p><span>Portfolio #6</span></p>
-                    </a>
-                </div>
-            </div>
+            <p>Check out my amazing portfolios below!</p>
         </section>
         <section id="about">
             <h2>About Me</h2>
